@@ -20,9 +20,9 @@ describe('readNight', () => {
 
   it('sums runs and retries and keeps the last status and error', () => {
     const refresh = night?.rows.find((r) => r.job === 'fixtures/refresh');
-    expect(refresh).toMatchObject({ runs: 4, retries: 3, lastStatus: 'ok', lastError: null });
+    expect(refresh).toMatchObject({ runs: 4, retries: 3, fails: 0, lastStatus: 'ok', lastError: null });
     const backup = night?.rows.find((r) => r.job === 'notes/backup');
-    expect(backup).toMatchObject({ runs: 1, lastStatus: 'fail', lastError: 'quota exceeded' });
+    expect(backup).toMatchObject({ runs: 1, fails: 1, lastStatus: 'fail', lastError: 'quota exceeded' });
   });
 
   it('keeps first and last time with their offset', () => {
