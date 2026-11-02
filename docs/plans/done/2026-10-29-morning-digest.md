@@ -95,3 +95,4 @@ Done when: the preview link no longer shows the lane marker.
 Blocked by: the number before `·` is what work needs to start, the numbers after are what "Done when" needs.
 #2 added `fails` to `DigestRow`: the page marks any fail and the board shows fail counts.
 #7 was closed before the reviewer looked and reopened: it holds only once the review is in.
+The contract #3–#6 built against is a comment on #1 (skill `work-issues-in-parallel`).
